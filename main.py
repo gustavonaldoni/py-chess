@@ -14,6 +14,7 @@ def main():
         ray.begin_drawing()
 
         board.draw_background()
+        board.draw_pieces()
 
         ray.end_drawing()
 
@@ -21,7 +22,15 @@ def main():
 
     ray.close_window()
 
-    print(board.board)
+    print()
+
+    for position, piece in board.board.items():
+        if piece is None:
+            continue
+        
+        print(f'{position} : {piece.type.value} {piece.team.value}')
+
+    print()
 
 
 if __name__ == "__main__":

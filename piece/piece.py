@@ -29,4 +29,4 @@ class Piece:
         self.sprite_path = self._get_sprite_path()
 
     def _get_sprite_path(self) -> str:
-        return f"./images/{self.team.value}_{self.type.value}_shadow_{DEFAULT_PIECE_SIZE}.png"
+        return f"./images/pieces/{self.team.value}_{self.type.value}_shadow_{DEFAULT_PIECE_SIZE}.png"
