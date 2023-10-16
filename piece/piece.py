@@ -22,12 +22,11 @@ class PieceTeam(Enum):
 
 
 class Piece:
-    def __init__(self, x: int, y: int, type: PieceType, team: PieceTeam) -> None:
-        self.x = x
-        self.y = y
+    def __init__(self, type: PieceType, team: PieceTeam) -> None:
         self.type = type
+        self.team = team
 
-        self.sprite_path = self._get_sprite_path(type)
+        self.sprite_path = self._get_sprite_path()
 
-    def _get_sprite_path(self, type: PieceType, team: PieceTeam) -> str:
-        return f"./images/{team.value}_{type.value}_shadow_{DEFAULT_PIECE_SIZE}.png"
+    def _get_sprite_path(self) -> str:
+        return f"./images/{self.team.value}_{self.type.value}_shadow_{DEFAULT_PIECE_SIZE}.png"
