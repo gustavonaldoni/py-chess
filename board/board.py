@@ -3,6 +3,7 @@ import pyray as ray
 from enum import Enum
 from piece.piece import Piece, PieceType, PieceTeam
 
+
 BOARD_SIZE = 8
 
 
